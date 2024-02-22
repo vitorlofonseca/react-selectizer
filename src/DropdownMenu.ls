@@ -5,7 +5,7 @@
 {create-factory}:React = require \react
 {div, input, span} = require \react-dom-factories
 {find-DOM-node} = require \react-dom
-ReactCSSTransitionGroup = create-factory require \react-transition-group/CSSTransitionGroup
+ReactTransitionGroup = create-factory require \react-transition-group/TransitionGroup
 ReactTether = create-factory require \./ReactTether
 DivWrapper = create-factory require \./DivWrapper
 OptionWrapper = create-factory require \./OptionWrapper
@@ -84,7 +84,7 @@ module.exports = class DropdownMenu extends React.PureComponent
     # render-animated-dropdown :: ComputedState -> ReactElement
     render-animated-dropdown: ({dynamic-class-name}:computed-state) ->
         if !!@props.transition-enter or !!@props.transition-leave
-            ReactCSSTransitionGroup do 
+            ReactTransitionGroup do 
                 ref: \dropdownMenuWrapper
                 component: \div
                 transition-name: \custom 

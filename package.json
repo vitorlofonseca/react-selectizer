@@ -9,7 +9,7 @@
     "coverage": "istanbul cover _mocha -- test/index.ls --require should --compilers ls:livescript",
     "coveralls": "istanbul cover _mocha -- test/index.ls --require should --compilers ls:livescript  && cat coverage/lcov.info | coveralls"
   },
-  "author": "Furqan Zafar",
+  "author": "Vitor Fonseca",
   "dependencies": {
     "prelude-extension": "^0.1.0",
     "prelude-ls": "^1.1.1",
@@ -27,7 +27,7 @@
     "react-transition-group": "global:ReactTransitionGroup",
     "react-dom": "global:ReactDOM",
     "react-dom-factories": "global:ReactDOMFactories",
-    "react-transition-group/CSSTransitionGroup": "global:React.addons.CSSTransitionGroup",
+    "react-transition-group/TransitionGroup": "global:React.addons.TransitionGroup",
     "tether": "global:Tether"
   },
   "devDependencies": {
@@ -68,9 +68,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/furqanZafar/react-selectize.git"
+    "url": "https://github.com/vitorlofonseca/react-selectizer.git"
   },
   "typings": "./src/index.d.ts",
+  "resolutions": {
+    "graceful-fs": "^4.2.11"
+  },
   "keywords": [
     "react-component",
     "select",
